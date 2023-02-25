@@ -1,4 +1,22 @@
 body {
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(33, 33, 33);
 }
-h1 { font-family: "Arial Narrow"; }
+
+
+
+a:visited {
+    color: rgb(255, 0, 255)
+}
+
+a:link {
+    color: rgb(255, 255, 0)
+}
+
+a:hover {
+    color: rgb(255, 128, 128)
+}
+
+/*figcaption {
+    font-family: 'Quicksand';
+}*/
+

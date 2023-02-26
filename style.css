@@ -2,8 +2,6 @@ body {
     background-color: rgb(33, 33, 33);
 }
 
-
-
 a:visited {
     color: rgb(255, 0, 255)
 }
@@ -15,8 +13,4 @@ a:link {
 a:hover {
     color: rgb(255, 128, 128)
 }
-
-/*figcaption {
-    font-family: 'Quicksand';
-}*/
 

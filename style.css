@@ -1,6 +1,20 @@
 body {
-    background-color: rgb(33, 33, 33);
+    background-color: #808080;
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    letter-spacing: 2px;
+    font-family: 'Quicksand', sans-serif;
+    width: 1150px;
+    margin: 0 auto;
+    color: black;
+    box-sizing: border-box;
+    background-color: white;
+}
+
 
 a:visited {
     color: rgb(255, 0, 255)

@@ -1,8 +1,8 @@
 body {
-    background-color: #808080;
+    background-color: #252525;
 }
 
-.header {
+.subheader {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -13,18 +13,34 @@ body {
     color: black;
     box-sizing: border-box;
     background-color: white;
+    font-weight: bold;
 }
 
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2em;
+    line-height: 1;
+    letter-spacing: 2px;
+    width: 1150px;
+    height: 100px;
+    margin: 0 auto;
+    color: black;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
 a:visited {
-    color: rgb(255, 0, 255)
+    color: rgb(0, 0, 128)
 }
 
 a:link {
-    color: rgb(255, 255, 0)
+    color: rgb(0, 128, 0)
 }
 
 a:hover {
-    color: rgb(255, 128, 128)
+    color: rgb(0, 64, 64)
 }
 

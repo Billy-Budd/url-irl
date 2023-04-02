@@ -1,46 +1,46 @@
+@import url('title.css');
+@import url('hamburger.css');
+@import url('desktopMenu.css');
+
 body {
-    background-color: #252525;
+  background-color: black;
 }
 
-.subheader {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    letter-spacing: 2px;
-    font-family: 'Quicksand', sans-serif;
-    width: 1150px;
-    margin: 0 auto;
-    color: black;
-    box-sizing: border-box;
-    background-color: white;
-    font-weight: bold;
+.container {
+  display: inline-block;
+  cursor: pointer;
+  justify-content: flex-start;
 }
 
+.tab {
+  display: inline-block;
+  width: 4em;
+}
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 2em;
-    line-height: 1;
-    letter-spacing: 2px;
-    width: 1150px;
-    height: 100px;
-    margin: 0 auto;
-    color: black;
-    box-sizing: border-box;
-    background-color: white;
+/* Smaller Window Mode */
+@media (max-width: 1574px) {
+  .desktopMenu{
+    font-size: 1em;
   }
-
-a:visited {
-    color: rgb(0, 0, 128)
+  .title{
+    font-size: 2em;
+  }
+  .tab{
+    width: 3em;
+  }
 }
 
-a:link {
-    color: rgb(0, 128, 0)
+/* Mobile Mode */
+@media (max-width: 1000px) {
+  .desktopMenu{
+    display: none;
+  }
 }
 
-a:hover {
-    color: rgb(0, 64, 64)
-}
 
+/* Desktop Mode - remove hamburger menu*/
+@media (min-width: 999px) {
+  .menuBar1, .menuBar2, .menuBar3, .menuButtonBackground, .menuBackground{
+    display:none;
+  }
+}

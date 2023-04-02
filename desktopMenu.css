@@ -1,0 +1,16 @@
+.desktopMenu {
+  display: inline;
+  font-size: 2em;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  letter-spacing: -.15px;
+  margin: 18px 0;
+}
+
+.desktopMenu a {
+  text-decoration: none;
+  color: white;
+}
+
+.desktopMenu a:hover {
+  color: rgb(255,0,76);
+}

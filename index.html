@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-       
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="stylesheet" href="style.css">
+
+    <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
-        
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+
+    <script src="animations.js"></script>
+
     <title>Home | John Lawler</title>
-    <meta charset="UTF-8">    
 
-    <body>
-      <h1><center>John Lawler</center></h1>
-      <div class="header">
-        <p> <a href="/resume.html">Resume</a> | Github | LinkedIn | Art | About | Contact </p>
-      </div>
-    </body>
-
+    <meta charset="UTF-8"> 
   </head>
+  
+  <body>
+    <center>
+      <div class="desktopMenu">
+
+        <a href="/resume">Resume</a>
+        <div class="tab"></div>
+
+        <a href="https://github.com/Billy-Budd">GitHub</a>
+        <div class="tab"></div>
+
+      </div>
+
+      <div class="title">
+        <a href="/">John Lawler</a>
+      </div>
+    
+      <div class="desktopMenu">
+
+        <div class="tab"></div>
+        <a href="https://www.linkedin.com/in/lawlerjohn/">LinkedIn</a>
+
+        <div class="tab"></div>
+        <a href="/portfolio">Art</a>
+        
+      </div>
+    </center>
+    
+    <div class="container" onclick="menuAnimation(this)">
+      <div class="menuBackground"></div>
+      <div class="menuButtonBackground"></div>
+      <div class="menuBar1"></div>
+      <div class="menuBar2"></div>
+      <div class="menuBar3"></div>
+    </div> 
+
+  </body>
 </html>

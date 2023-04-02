@@ -1,52 +1,62 @@
+/* color definitions */
+:root {
+  --hamburger-background: rgb(15, 15, 15);
+  --hamburger-icon: rgb(255, 255, 255);
+  --hamburger-clicked: rgb(255, 0, 76);
+}
+
 /* general hamburger menu setup */
 .menuBar1, .menuBar2, .menuBar3 {
     position: absolute;
     left: 18px;
     width: 35px;
     height: 5px;
-    background-color: #ffffff;
+    background-color: var(--hamburger-icon);
     margin: 6px 0;
     transition: 0.15s;
-  }
-  /* background to improve ux */
-  .menuButtonBackground {
-    position: absolute;
-    left: 18px;
-    top: 25px;
-    width: 35px;
-    height: 28px;
-    background-color: black;
-    margin: 6px 0;
-  }
-  /* space the bars evenly */
-  .menuBar1 {
-    top: 28px;
-  }
-  .menuBar2 {
-    top: 37px;
-  }
-  .menuBar3 {
-    top: 46px;
-  }
-
-  .menuBackground {
-    opacity: 0;
-    transition: 0.15s;
-    height: 600px;
-    width: 600px;
-    background-color: red;
-    
-  }
-  /* create x for hamburger menu */
-  .menuAnimation .menuBar1 {
-    transform: translate(0, 9px) rotate(-45deg);
-    background-color: rgb(255, 0, 76);
-  }
-  .menuAnimation .menuBar3 {
-    transform: translate(0, -9px) rotate(45deg);
-    background-color: rgb(255, 0, 76);
-  }
-  /* remove second bar */
-  .menuAnimation .menuBar2 {
-    opacity: 0;
 }
+/* background to improve ux */
+.menuButtonBackground {
+  position: absolute;
+  left: 18px;
+  top: 25px;
+  width: 35px;
+  height: 28px;
+  background-color: var(--hamburger-background);
+  margin: 6px 0;
+}
+/* menu background for links to sit on */
+.menuBackground {
+  opacity: 0;
+  transition: 0.15s;
+  height: 100vh;
+  width: 60vw;
+  background-color: var(--hamburger-background);
+  transition: 0.15s;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  pointer-events: none;
+}
+
+/* space the bars evenly */
+.menuBar1 { top: 28px; }
+.menuBar2 { top: 37px; }
+.menuBar3 { top: 46px; }
+
+/* animation instructions */
+/* create x for hamburger menu */
+.menuAnimation .menuBar1 {
+  transform: translate(0, 9px) rotate(-45deg);
+  background-color: var(--hamburger-clicked);
+}
+.menuAnimation .menuBar3 {
+  transform: translate(0, -9px) rotate(45deg);
+  background-color: var(--hamburger-clicked);
+}
+/* remove second bar */
+.menuAnimation .menuBar2 { opacity: 0; }
+/* change button background to be same as the menu */
+.menuAnimation .menuButtonBackground { background-color: var(--hamburger-background); }
+/* make the background visible */
+.menuAnimation .menuBackground { opacity: 100; }

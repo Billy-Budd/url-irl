@@ -1,16 +1,17 @@
+/* basic desktop menu style */
 .desktopMenu {
   display: inline;
   font-size: 2em;
-  font-family: 'Montserrat Subrayada', sans-serif;
-  letter-spacing: -.15px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: .15px;
   margin: 18px 0;
 }
-
+/* remove underlines to match */
 .desktopMenu a {
   text-decoration: none;
-  color: white;
+  color: var(--base-hyperlink);
 }
-
+/* change the hover color to match other hyperlinks */
 .desktopMenu a:hover {
-  color: rgb(255,0,76);
+  color: var(--hover-hyperlink);
 }

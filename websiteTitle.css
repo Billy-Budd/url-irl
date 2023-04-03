@@ -1,0 +1,27 @@
+/* css for John Lawler at the top of each screen */
+.websiteTitle {
+  font-family: "strippy", sans-serif;
+  letter-spacing: 5px;
+  font-size: 4em;
+  margin: 18px 0;
+  display: inline-block;
+}
+/* make the hyperlink not have an underline */
+.websiteTitle a {
+  text-decoration: none;
+  color: var(--base-hyperlink);
+}
+/* change hover color */
+.websiteTitle a:hover {
+  color: rgb(255, 0, 76);
+}
+
+/* toggle the title to be non hyperlink if hamburger menu is open */
+.titleToggle a {
+  color: var(--base-hyperlink);
+  pointer-events: none;
+}
+/* change hover color to be white so it doesn't look clickable */
+.titleToggle a:hover{
+  color: var(--base-hyperlink);
+}

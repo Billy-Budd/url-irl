@@ -2,7 +2,7 @@
 :root {
   --hamburger-background: rgb(15, 15, 15);
   --hamburger-icon: rgb(255, 255, 255);
-  --hamburger-clicked: rgb(255, 0, 76);
+  --hamburger-clicked: var(--hover-hyperlink);
 }
 
 /* general hamburger menu setup */
@@ -30,13 +30,56 @@
   opacity: 0;
   transition: 0.15s;
   height: 100vh;
-  width: 60vw;
+  width: 45vw;
   background-color: var(--hamburger-background);
   transition: 0.15s;
   left: 0px;
   position: absolute;
   top: 0px;
   pointer-events: none;
+}
+/* a place to get out of the menu instead of the x */
+.outsideMenu {
+  opacity:0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* menu links formatting so they show up properly */
+.menuLinks {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  display: block;
+  flex-direction: column;
+  align-items: left;
+  z-index: 1;
+  top: -14px;
+  left: 115px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  pointer-events: none;
+}
+/* needed so they are stacked on top of each other */
+.menuLinks a {
+  display: block;
+  text-align: left;
+  margin: 40px 0;
+  color: var(--base-hyperlink);
+}
+
+/* remove underlines to match */
+.menuLinks a {
+  text-decoration: none;
+  color: var(--base-hyperlink);
+}
+/* change the hover color to match other hyperlinks */
+.menuLinks a:hover {
+  color: var(--hover-hyperlink);
 }
 
 /* space the bars evenly */
@@ -54,9 +97,16 @@
   transform: translate(0, -9px) rotate(45deg);
   background-color: var(--hamburger-clicked);
 }
+.menuAnimation .menuLinks {
+  pointer-events: all;
+  opacity: 100;
+}
+
 /* remove second bar */
 .menuAnimation .menuBar2 { opacity: 0; }
 /* change button background to be same as the menu */
 .menuAnimation .menuButtonBackground { background-color: var(--hamburger-background); }
 /* make the background visible */
 .menuAnimation .menuBackground { opacity: 100; }
+/* close the menu if the invisible box is clicked */
+.menuAnimation .outsideMenu { pointer-events: all; }

@@ -5,18 +5,58 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!--google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
-
-    <script src="animations.js"></script>
-
     <title>Home | John Lawler</title>
 
     <meta charset="UTF-8"> 
+
   </head>
   <body>
-    {% include menu.html %}
+    <center>
+      <div class="desktopMenu">
+
+        <a href="/resume">Resume</a>
+        <div class="tab"></div>
+
+        <a href="https://github.com/Billy-Budd">GitHub</a>
+        <div class="tab"></div>
+
+      </div>
+
+      <div class="websiteTitle" id="website-title">
+        <a href="/">John Lawler</a>
+      </div>
+    
+      <div class="desktopMenu">
+
+        <div class="tab"></div>
+        <a href="https://www.linkedin.com/in/lawlerjohn/">LinkedIn</a>
+
+        <div class="tab"></div>
+        <a href="/art">Art</a>
+        
+      </div>
+    </center>
+    
+    <div class="container" onclick="this.classList.toggle('menuAnimation'); document.getElementById('website-title').classList.toggle('titleToggle')">
+      <div class="menuLinks">
+        <a href="/">Home</a>
+        <a href="/resume">Resume</a>
+        <a href="https://github.com/Billy-Budd">GitHub</a>
+        <a href="https://www.linkedin.com/in/lawlerjohn/">LinkedIn</a>
+        <a href="/art">Art</a>
+      </div>
+      <div class="menuBackground"></div>
+      <div class="outsideMenu"></div>
+      
+      <div class="menuButtonBackground"></div>
+      <div class="menuBar1"></div>
+      <div class="menuBar2"></div>
+      <div class="menuBar3"></div>
+    </div> 
+        
+    <center>
+      <img class="portrait" id="amongus" src="images/john.jpg">
+    </center>
+
   </body>
 </html>

@@ -1,9 +1,44 @@
-@import url('title.css');
+@import url('websiteTitle.css');
 @import url('hamburger.css');
 @import url('desktopMenu.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@500&display=swap');
+
+@font-face {
+  font-family: strippy;
+  src: url("fonts/Strippy-Regular.otf");
+}
+
+:root {
+  --hover-hyperlink: rgb(255, 0, 76);
+  --website-background: rgb(0, 0, 0);
+  --base-hyperlink: rgb(255, 255, 255);
+  --highlight-color: rgb(255, 255, 0);
+  --base-text: rgb(255, 255, 255);
+}
+
+::selection {
+  background-color: var(--website-background);
+  color: var(--highlight-color);
+}
 
 body {
-  background-color: black;
+  background-color: var(--website-background);
+}
+
+.tempText {
+  color: var(--highlight-color);
+}
+
+.currentTab {
+  color: var(--highlight-color);
+}
+
+.portrait {
+  border-radius: 50%; 
+  width: 40em; 
+  height: 40em;
+  margin: 40px;
+  user-select: none;
 }
 
 .container {
@@ -19,24 +54,32 @@ body {
 
 /* Smaller Window Mode */
 @media (max-width: 1574px) {
-  .desktopMenu{
-    font-size: 1em;
+  .desktopMenu {
+    font-size: 1.5em;
   }
-  .title{
+  .websiteTitle {
     font-size: 2em;
+    letter-spacing: 3px;
   }
-  .tab{
+  .tab {
     width: 3em;
+  }
+
+  .portrait {
+    height: 20em;
+    width: 20em;
   }
 }
 
 /* Mobile Mode */
 @media (max-width: 1000px) {
-  .desktopMenu{
+  .desktopMenu {
     display: none;
   }
+  .websiteTitle {
+    letter-spacing: 1px;
+  }
 }
-
 
 /* Desktop Mode - remove hamburger menu*/
 @media (min-width: 999px) {

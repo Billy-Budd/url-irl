@@ -1,7 +1,7 @@
 /* css for John Lawler at the top of each screen */
 .websiteTitle {
-  font-family: "strippy", sans-serif;
-  letter-spacing: 5px;
+  font-family: "nimbus", sans-serif;
+  letter-spacing: 0px;
   font-size: 4em;
   margin: 18px 0;
   display: inline-block;
@@ -13,7 +13,7 @@
 }
 /* change hover color */
 .websiteTitle a:hover {
-  color: rgb(255, 0, 76);
+  color: var(--hover-hyperlink);
 }
 
 /* toggle the title to be non hyperlink if hamburger menu is open */
@@ -22,6 +22,6 @@
   pointer-events: none;
 }
 /* change hover color to be white so it doesn't look clickable */
-.titleToggle a:hover{
+.titleToggle a:hover {
   color: var(--base-hyperlink);
 }

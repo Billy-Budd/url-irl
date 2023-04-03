@@ -8,6 +8,11 @@
   src: url("fonts/Strippy-Regular.otf");
 }
 
+@font-face {
+  font-family: Nimbus;
+  src: url("fonts/Nimbus.otf");
+}
+
 :root {
   --hover-hyperlink: rgb(255, 0, 76);
   --website-background: rgb(0, 0, 0);

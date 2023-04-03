@@ -1,69 +1,44 @@
 .row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    border-bottom: 0px solid black;
-    padding-top: 50px;
-  }
-  .row:last-child{
-    padding-bottom: 50px;
-  }
-
-  .column {
-    width: 350px;
-    padding: 25px;  
-    box-sizing: border-box;
-    text-align: center; /* Center the image within the column */
-    background-color: white ;
-  }
-
-  .column-wrapper {
-    margin-right: 50px; /* Margins between each card */
-  }
-
-  .column-wrapper:last-child {
-    margin-right: none; /* Remove the right border from the last column-wrapper element */
-  }
-
-  .column img {
-    display: block; /* Remove default bottom margin for images */
-    margin: 0 auto; /* Center the image horizontally */
-    width: 100%;
-    height: auto;
-  }
-
-  .bar {
-    width: 0px;
-    background-color: #808080;
-  }
-
-
-.subheader {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    letter-spacing: 2px;
-    font-family: 'Quicksand', sans-serif;
-    width: 1150px;
-    margin: 0 auto;
-    color: black;
-    box-sizing: border-box;
-    background-color: white;
-    font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5vw;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5vw;
 }
 
+.row img {
+  width: 22.5vw;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 2em;
-    line-height: 1;
-    letter-spacing: 2px;
-    width: 1150px;
-    height: 100px;
-    margin: 0 auto;
-    color: black;
-    box-sizing: border-box;
-    background-color: white;
+.imageContainer {
+
+  border: 1px solid white;
+  margin-bottom: 10vw;
+  text-align: center;
+  background-color: white;
+}
+
+@media (max-width: 1574px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
   }
+  .row img {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .row img {
+    width: 50vw;
+  }
+}
+

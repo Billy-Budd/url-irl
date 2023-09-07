@@ -1,6 +1,10 @@
+<!--TODO LIST-->
+<!--Create menu as a separate file so it doesn't have to be on every page-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="style.css">
@@ -10,53 +14,69 @@
     <meta charset="UTF-8"> 
 
   </head>
+
   <body>
-    <center>
-      <div class="desktopMenu">
 
-        <a href="/resume">Resume</a>
-        <div class="tab"></div>
+  <!--DESKTOP-->
+  <center>
+  <!--DESKTOP MENU - LEFT-->
+  <div class="desktopMenu">
 
-        <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
-        <div class="tab"></div>
+    <a href="/resume">Resume</a>
+    <div class="tab"></div>
 
-      </div>
+    <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
+    <div class="tab"></div>
 
-      <div class="websiteTitle" id="website-title">
-        <a href="/">John Lawler</a>
-      </div>
-    
-      <div class="desktopMenu">
+  </div>
 
-        <div class="tab"></div>
-        <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
+  <!--DESKTOP TITLE - CENTER-->
+  <div class="websiteTitle" id="website-title">
+    <a href="/">John Lawler</a>
+  </div>
+  
+  <!--DESKTOP MENU - RIGHT-->
+  <div class="desktopMenu">
 
-        <div class="tab"></div>
-        <a href="/art">Art</a>
+    <div class="tab"></div>
+    <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
+
+    <div class="tab"></div>
+    <a href="/art">Art</a>
         
-      </div>
-    </center>
-    
-    <div class="container" onclick="this.classList.toggle('menuAnimation'); document.getElementById('website-title').classList.toggle('titleToggle')">
-      <div class="menuLinks">
-        <a href="/">Home</a>
-        <a href="/resume">Resume</a>
-        <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
-        <a href="/art">Art</a>
-      </div>
-      <div class="menuBackground"></div>
-      <div class="outsideMenu"></div>
-      
-      <div class="menuButtonBackground"></div>
-      <div class="menuBar1"></div>
-      <div class="menuBar2"></div>
-      <div class="menuBar3"></div>
-    </div> 
-        
-    <center>
-      <img class="portrait" src="images/john.jpg">
-    </center>
+  </div>
+  </center>
+  <!--DESKTOP-->
+
+  <!--MOBILE-->
+  <div class="container" onclick="this.classList.toggle('menuAnimation'); document.getElementById('website-title').classList.toggle('titleToggle')">
+
+    <!--MOBILE - HAMBURGER LINKS-->
+    <div class="menuLinks">
+
+      <a href="/">Home</a>
+      <a href="/resume">Resume</a>
+      <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
+      <a href="/art">Art</a>
+
+    </div>
+
+    <!--MOBILE - HAMBURGER BOX/INVIS BOX-->
+    <div class="menuBackground"></div>
+    <div class="outsideMenu"></div>
+  
+    <!--MOBILE - HAMBUGER BUTTON-->
+    <div class="menuButtonBackground"></div>
+    <div class="menuBar1"></div>
+    <div class="menuBar2"></div>
+    <div class="menuBar3"></div>
+
+    </div>
+    <!--MOBILE-->
+  
+    <!--PORTRAIT-->
+    <center><img class="portrait" src="images/john.jpg" alt="A Photo of Me :)"></center>
 
   </body>
 </html>

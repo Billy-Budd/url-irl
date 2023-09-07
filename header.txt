@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/errors.css">
-
-    <title>404 | John Lawler</title>
-
-    <meta charset="UTF-8"> 
-
-  </head>
-  <body>
-    <!--DESKTOP-->
-    <center>
+<!--DESKTOP-->
+<center>
   <!--DESKTOP MENU - LEFT-->
   <div class="desktopMenu">
 
@@ -69,19 +55,3 @@
 
 </div>
 <!--MOBILE-->
-
-    <center>
-      <div class="errorCode">
-        <p>404!</p>
-      </div>
-
-      <div class="errorText">
-        <p>Page could not be found :(</p>
-        <p>Come check out the <a href="/">home page</a> instead?</p>
-      </div>
-    </center>
-    
-    
-
-  </body>
-</html>

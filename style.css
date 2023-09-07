@@ -1,7 +1,7 @@
-@import url('websiteTitle.css');
-@import url('hamburger.css');
-@import url('desktopMenu.css');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@500&display=swap');
+@import url('styles/websiteTitle.css');
+@import url('styles/hamburger.css');
+@import url('styles/desktopMenu.css');
+@import url('styles/https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Montserrat:wght@500&display=swap');
 
 @font-face {
   font-family: strippy;

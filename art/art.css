@@ -1,27 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2.5vw;
+  grid-gap: 10vw;
   justify-content: center;
   align-items: center;
-  padding-top: 2.5vw;
+  max-width: 1200px; /* Set a maximum width for your content */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 2.5vw 0; /* Add padding to the top and bottom */
 }
 
-.row img {
+/* Target the img element within .imageContainer more specifically */
+.imageContainer img {
   width: 22.5vw;
   display: block;
   margin: auto;
   padding: 10px;
   border: 1px solid white;
   margin-bottom: 20px;
+  /* Add the box-sizing property here as well */
+  box-sizing: border-box;
 }
 
 .imageContainer {
-
   border: 1px solid white;
-  margin-bottom: 10vw;
   text-align: center;
   background-color: white;
+  /* Make sure to add box-sizing here as well */
+  box-sizing: border-box;
+}
+
+.imageFolderTitle {
+  text-align: center;
+  font-size: 2.5em;
+  color: black;
+  margin-top: -25px;
+  text-decoration: underline;
+}
+
+.imageFolderTitle a:visited{
+  color: black;
+}.imageFolderTitle a{
+  color: black;
+}
+.imageFolderTitle a:hover {
+  color: var(--hover-hyperlink)
+}
+
+.imageText {
+  font-size: 1.5em;
 }
 
 @media (max-width: 1574px) {
@@ -35,10 +66,17 @@
 
 @media (max-width: 1000px) {
   .row {
+    
+    padding: 12.5vw;
     grid-template-columns: repeat(1, 1fr);
   }
   .row img {
-    width: 50vw;
+    width: 75vw;
+    margin: 0 auto;
+  }
+  .imageFolderTitle {
+    margin-top: 0px;
   }
 }
+
 

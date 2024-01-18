@@ -1,0 +1,32 @@
+/* styles that applies to all pages */
+
+/* Times New Roman-esque font that is less evenly weighted */
+@font-face {
+  font-family: nimbus;
+  src: url(../fonts/Nimbus.otf);
+}
+
+/* color variables */
+:root {
+  --hover-hyperlink: rgb(255, 0, 76);
+  --website-background: rgb(0, 0, 0);
+  --base-hyperlink: rgb(255, 255, 255);
+  --highlight-color: rgb(255, 255, 0);
+  --base-text: rgb(255, 255, 255);
+}
+
+/* apply selection color - turns text from white to yellow with no background */
+::selection {
+  background-color: var(--website-background);
+  color: var(--highlight-color);
+}
+
+/* set black as the background color */
+body {
+  background-color: var(--website-background);
+}
+
+/* important for how desktop header is implemented */
+body {
+  display: flex;
+}

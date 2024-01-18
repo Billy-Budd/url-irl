@@ -1,0 +1,121 @@
+@import url('main.css'); /* styles that applies to all pages */
+@import url('header/desktop.css'); /* header - desktop style */
+@import url('header/mobile.css'); /*  header - mobile  style */
+
+/* please note that a lot of this code is from a long time ago; however, it took a long time
+   to get it the way i wanted it to look. It is on my list for the future to clean this up,
+   but for now, I will keep it this way. "temporary fix" going to be a forever fix, and so it goes*/
+
+/* the body here was built on the option for display: block. 
+   without it, it is not correct, so we change it here */
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* not the best fix in the world, but the easiest to implement.
+   create a new div that just uses the flex option instead, and
+   add another div to the header to accommodate for this. */
+.art-header-container-fix {
+  display: flex;
+}
+
+/* quick fix because its of the weird display change fixes */
+.hamburger-icon {
+  top: -5px;
+}
+  
+/* container that dictates a row of image folders */
+.row {
+  /* grid options */
+  display: grid; /* grid for these to use grid-template */
+  grid-template-columns: repeat(3, 1fr); /* base is 3 images per row */
+
+  /* grip specific options for centering and margins */
+  grid-gap: 10vw;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: 0 auto; /* center horizontally */
+  padding: 2.5vw 0; /* padding to the top and bottom */
+}
+  
+/* target the img element within .image-container more specifically */
+.image-container img {
+  width: 22.5vw; /* each portion is this size */
+  display: block; /* block inside each div container */
+  margin: auto; /* auto for image spacing */
+  padding: 10px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* add the box-sizing property here as well */
+}
+
+/* generic image container properties to make the white background */
+.image-container {
+
+  /* make white background */
+  border: 1px solid white;
+  background-color: white;
+
+  text-align: center;
+  box-sizing: border-box; /* Make sure to add box-sizing here as well */
+}
+  
+/* folder title decoration specifications */
+.image-folder-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: black;
+  margin-top: -25px;
+  text-decoration: underline;
+}
+  
+/* remove the blue visited color */
+.image-folder-title a:visited{
+  color: black;
+}
+
+/* make the base color black */
+.image-folder-title a { 
+  color: black;
+}
+
+/* change hover to be same pink/red hover consistent */
+.image-folder-title a:hover {
+  color: var(--hover-hyperlink)
+}
+  
+/* sub title */
+.image-text {
+  font-size: 1.5em;
+}
+  
+/* change sizing when window is too small */
+@media (max-width: 1778px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .row img {
+    width: 40vw;
+  }
+}
+  
+/* mobile sizing */
+@media (max-width: 1000px) {
+  .row {
+  
+    padding: 12.5vw;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .row img {
+    width: 75vw;
+    margin: 0 auto;
+  }
+  .image-folder-title {
+    margin-top: 0px;
+  }
+}
+  

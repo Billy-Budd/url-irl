@@ -1,136 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="art.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/art.css">
     <title>Art | John Lawler</title>
-
-    <meta charset="UTF-8"> 
-
+    <meta charset="UTF-8">
   </head>
+
   <body>
-  <!--DESKTOP-->
-  <center>
-    <!--DESKTOP MENU - LEFT-->
-    <div class="desktopMenu">
-  
-      <a href="../resume/resume.pdf" target="_blank">Resume</a>
-      <div class="tab"></div>
-  
-      <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
-      <div class="tab"></div>
-  
-    </div>
-  
-    <!--DESKTOP TITLE - CENTER-->
-    <div class="websiteTitle" id="website-title">
-      <a href="/">John Lawler</a>
-    </div>
-    
-    <!--DESKTOP MENU - RIGHT-->
-    <div class="desktopMenu">
-  
-      <div class="tab"></div>
-      <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
-  
-      <div class="tab"></div>
-      <a href="/art">Art</a>
-          
-    </div>
-  </center>
-  <!--DESKTOP-->
-  
-  <!--MOBILE-->
-    <div class="container" onclick="this.classList.toggle('menuAnimation'); document.getElementById('website-title').classList.toggle('titleToggle')">
-  
-      <!--MOBILE - HAMBURGER LINKS-->
-      <div class="menuLinks">
-  
-        <a href="/">Home</a>
-        <a href="../resume/resume.pdf" target="_blank">Resume</a>
-        <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
-        <a href="/art">Art</a>
-  
+
+    <!---------------------------------------------------------------------------------------------------->
+
+    <!--DESKTOP-->
+
+    <!--RESUME [HEADER OUTER LEFT SIDE]-->
+    <div class="art-header-container-fix">
+      <div class="desktop-header-container" id="header-aux">
+        <a href="resume/resume.pdf" target="_blank">Resume</a>
       </div>
   
-      <!--MOBILE - HAMBURGER BOX/INVIS BOX-->
-      <div class="menuBackground"></div>
-      <div class="outsideMenu"></div>
-    
-      <!--MOBILE - HAMBUGER BUTTON-->
-      <div class="menuButtonBackground"></div>
-      <div class="menuBar1"></div>
-      <div class="menuBar2"></div>
-      <div class="menuBar3"></div>
+      <!--GITHUB [HEADER INNER LEFT SIDE]-->
+      <div class="desktop-header-container" id="header-aux">
+        <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
+      </div>
+  
+      <!--TITLE [HEADER CENTER]-->
+      <div class="desktop-header-container"> 
+        <div class="desktop-title" id="website-title">
+          <a href="/">John Lawler</a>
+        </div>
+      </div>
+  
+      <!--LINKEDIN [HEADER INNER RIGHT SIDE]-->
+      <div class="desktop-header-container" id="header-aux">
+        <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
+      </div>
+  
+      <!--ART [HEADER OUTER RIGHT SIDE]-->
+      <div class="desktop-header-container" id="header-aux">
+        <a href="/art">Art</a>
+      </div>
   
     </div>
+    
+    <!--/DESKTOP-->
+
+    <!---------------------------------------------------------------------------------------------------->
+
     <!--MOBILE-->
 
+    <!--HAMBURGER MENU CONTENTS-->
+    <div class="hamburger-menu" id="hamburger-menu-id">
+      <a href="javascript:void(0)" id="close-button" onclick="closeHamburger()">&times;</a>
+      <a href="/">Home</a>
+      <a href="resume/resume.pdf" target="_blank">Resume</a>
+      <a href="https://github.com/Billy-Budd" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/lawlerjohn/" target="_blank">LinkedIn</a>
+      <a href="/art">Art</a>
+    </div>
+
+    <!--HAMBURGER MENU SHADOW TO CREATE CONTRAST AND EASY MENU CLOSE-->
+    <div class="hamburger-menu-shadow" id="hamburger-menu-id2" onclick="closeHamburger()"></div>
+        
+    <!--HAMBURGER MENU ICON-->
+    <div class="hamburger-icon" onclick="openHamburger()">
+      <p>&#9776;</p>
+    </div>
+    
+    <!--HAMBURGER MENU SCRIPT-->
+    <script>
+      function openHamburger() {
+        document.getElementById("hamburger-menu-id").style.width = "80%";
+        document.getElementById("hamburger-menu-id2").style.width = "100%";
+        document.getElementById('website-title').classList.toggle('titleToggle');
+        document.getElementById('my-portrait').classList.toggle('portraitToggle');
+      }
+
+      function closeHamburger() {
+        document.getElementById("hamburger-menu-id").style.width = "0%";
+        document.getElementById("hamburger-menu-id2").style.width = "0%";
+        document.getElementById('website-title').classList.toggle('titleToggle');
+        document.getElementById('my-portrait').classList.toggle('portraitToggle');
+      }
+    </script>
+    
+    <!--/MOBILE-->
+
+    <!---------------------------------------------------------------------------------------------------->
+
     <div class="row">
-      <div class="imageContainer">
+      <div class="image-container">
         <a href="https://photos.app.goo.gl/7piCAc1KygNqVUGG8" target="_blank">
           <img
            src="https://lh3.googleusercontent.com/pw/AMWts8Bt3DRM1Hj0aHD-N9Gx5idiwHRCQHOdad_jfATGutrEulCKrXofQmWUBA78r8WNpBZSRQmDfe_9WORludN75ls4UDbZiCi3gAwR0f25aTGrBxW03_BH1buwz7Sk-3rCHUyYATzCgyjuC9syawJyHxFX=s902-no?authuser=6"
            alt="ARTS3377 S2020" 
            > 
         </a>
-        <div class="imageFolderTitle"><a href="https://photos.app.goo.gl/7piCAc1KygNqVUGG8" target="_blank">ARTS3377 S2020</a></div>
-        <div class="imageText">Photos from my first higher education art class, focusing on altered images and pushing my creativity, abilities, and knowledge of Photoshop.</div>
+        <div class="image-folder-title"><a href="https://photos.app.goo.gl/7piCAc1KygNqVUGG8" target="_blank">ARTS3377 S2020</a></div>
+        <div class="image-text">Photos from my first higher education art class, focusing on altered images and pushing my creativity, abilities, and knowledge of Photoshop.</div>
       </div>
-      <div class="imageContainer">
+      <div class="image-container">
         <a href="https://photos.app.goo.gl/aiD8E2xRtnJv2Lxr9" target="_blank">
           <img
            src="https://lh3.googleusercontent.com/pw/AMWts8BzPmQd8Aog0Zs-IeViPyIW5G2IIYm5wYsQJNItozkr8Al5SFzGZ1UU_6PG6az6hTUXhkUbWB0-0WSN34Z5k0b7RAgKTFAEpEaOEPAZSbjiwUlSwpG6GQlQpCerJ2CS9lA_r1z5JrEG2nIEG70vneTH=s902-no?authuser=6"
            alt="ARTS3372 F2020" 
            >
         </a>
-        <div class="imageFolderTitle"><a href="https://photos.app.goo.gl/aiD8E2xRtnJv2Lxr9" target="_blank">ARTS3377 F2020</a></div>
-        <div class="imageText">Photos from my color concepts class where I focused on taking better pictures and using less Photoshop as well as including literary allusions.</div>
+        <div class="image-folder-title"><a href="https://photos.app.goo.gl/aiD8E2xRtnJv2Lxr9" target="_blank">ARTS3377 F2020</a></div>
+        <div class="image-text">Photos from my color concepts class where I focused on taking better pictures and using less Photoshop as well as including literary allusions.</div>
       </div>
-      <div class="imageContainer">
+      <div class="image-container">
         <a href="https://photos.app.goo.gl/MgGK9sgEoXuvxG8BA" target="_blank">
           <img
            src="https://lh3.googleusercontent.com/pw/AMWts8BRB6qudAe4A-g_EcIarsdHfKZCLVsdC1uI_OPkGy8BU4RcuNU-naLWfOwcOCc6fSH1hnLHtjFggRAnM7uiHkWtYdhwye-ViLJtYhu5Jb-vYuDw7_8yUB6nwqfSawl6HRQakrlDXPzsC2wuFHJ2hSeo=s902-no?authuser=6"
            alt="Boil '22" 
            >
         </a>
-        <div class="imageFolderTitle"><a href="https://photos.app.goo.gl/MgGK9sgEoXuvxG8BA" target="_blank">Boil '22</a></div>
-        <div class="imageText">Photos of my friends and I enjoying a Crawfish Boil. These pictures aren't perfect, but I ended up really enjoying the poses and the use of flash.</div>
+        <div class="image-folder-title"><a href="https://photos.app.goo.gl/MgGK9sgEoXuvxG8BA" target="_blank">Boil '22</a></div>
+        <div class="image-text">Photos of my friends and I enjoying a Crawfish Boil. These pictures aren't perfect, but I ended up really enjoying the poses and the use of flash.</div>
       </div>
-      <div class="imageContainer">
+      <div class="image-container">
         <a href="https://photos.app.goo.gl/rnHVoLmssTCQuXvdA" target="_blank">
           <img
            src="https://lh3.googleusercontent.com/pw/AMWts8DrVr4C7Fx-t1qB6edkR1PBxcdmmn6bZiBbhX946KkcgpzLTynzBr5quqgg1PkPD0QPPj4QS5PbMECVKdGf0P9rX5tMMR1PplYpMdoMP_DlhYpSK4Nm8esIJtP-VCUyTWSfhsEUPpur2IACGpllcPN2=s902-no?authuser=6"
            alt="Zawh & the Boys - April '22" 
            >
         </a>
-        <div class="imageFolderTitle"><a href="https://photos.app.goo.gl/rnHVoLmssTCQuXvdA" target="_blank">Zawh & the Boys - April '22</a></div>
-        <div class="imageText">Photos of my friend's birthday. Lighting was more difficult with lots of low light and purples, but it was more about recording the event anyways.</div>
+        <div class="image-folder-title"><a href="https://photos.app.goo.gl/rnHVoLmssTCQuXvdA" target="_blank">Zawh & the Boys - '22</a></div>
+        <div class="image-text">Photos of my friend's birthday. Lighting was more difficult with lots of low light and purples, but it was more about recording the event anyways.</div>
       </div>
-      <div class="imageContainer">
+      <div class="image-container">
         <a href="https://photos.app.goo.gl/QNrLyP7B5CFVYZnx9" target="_blank">
           <img 
            src="https://lh3.googleusercontent.com/pw/AMWts8BCJWJrRmBk2eENJX3cleNoyVp0YMvkqD06nhujRD0YSxiPXdpado_Rkt7xqlvSlndJ_tUQQq8NNEl_vyssX32Zp3IjGrg_FIeB8sDgG05UMkY2Mv3KTqcEmQgYSECbg7sWXTYo-MiKBj2AYuyk8k1h=s902-no?authuser=6"
            alt="APART" 
            >
         </a>
-        <div class="imageFolderTitle"><a href="https://photos.app.goo.gl/QNrLyP7B5CFVYZnx9" target="_blank">APART</a></div>
-        <div class="imageText">Photos from my AP Art portfolio from high school. This is missing my physical works, but it shows how far I've come with my abilities in Photoshop.</div>
+        <div class="image-folder-title"><a href="https://photos.app.goo.gl/QNrLyP7B5CFVYZnx9" target="_blank">APART</a></div>
+        <div class="image-text">Photos from my AP Art portfolio from high school. This is missing my physical works, but it shows how far I've come with my abilities in Photoshop.</div>
       </div>
-      <div class="imageContainer">
+      <div class="image-container">
         <a href="https://photos.app.goo.gl/7PJRAkqLxDjPgfKB6" target="_blank">
           <img 
            src="https://lh3.googleusercontent.com/pw/AMWts8AKNsAKsViU7SEA9CTSSKg1hVAF90HTYuxs8wxOUsnj-Kv-A4ED6Yb1Ngn-x0eXxLtHqfk4s80_avlyRfn4EkO-G2wpQPKFhZyuXjylXiEuspHnCREGmPscyqS86AobCOfzqVRZBCMYLtfUjmwF5QQo=s902-no?authuser=6"
            alt="ARTS3377 F2021" 
            >
         </a>
-        <div class="imageFolderTitle"><a href="https://photos.app.goo.gl/7PJRAkqLxDjPgfKB6" target="_blank">ARTS3377 F2021</a></div>
-        <div class="imageText">Photos from my last photography class at UTD. Unfortunately, I think these are my worst group of photos because I wasn't pushing myself like before.</div>
+        <div class="image-folder-title"><a href="https://photos.app.goo.gl/7PJRAkqLxDjPgfKB6" target="_blank">ARTS3377 F2021</a></div>
+        <div class="image-text">Photos from my last photography class at UTD. Unfortunately, I think these are my worst group of photos because I wasn't pushing myself like before.</div>
       </div>
     </div>
+
+    
+
   </body>
 </html>

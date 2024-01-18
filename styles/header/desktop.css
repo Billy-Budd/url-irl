@@ -1,0 +1,62 @@
+@import url('styles/main.css'); /* styles that applies to all pages */
+
+/* dictates five equal sized boxes to contain the header links */
+.desktop-header-container {
+  flex: 1; /* use the entire horizontal space */
+  width: calc(20% - 1%); /* some extra space for safety */
+  height: 100px; /* height instructions */
+  margin: 5px; /* additional safety space */
+  display: flex; /* specify flex container to use justify-content and align-items */
+  justify-content: center; /* horizontal centering of content */
+  align-items: center; /* vertical centering of content */
+}
+
+/* super category for all desktop header text */
+.desktop-header-container a {
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif; /* secondary font */
+  text-decoration: none; /* remove underline */
+  color: var(--base-hyperlink); /* white text */
+}
+
+/* on hover color for header hyperlinks */
+.desktop-header-container a:hover {
+  color: var(--hover-hyperlink); /* red/pink text */
+}
+
+/* special instructions for website title */
+.desktop-title a {
+  font-size: 4em; /* larger font size for title */
+  font-family: "nimbus"; /* font slightly different from TNR */
+}
+
+/* breakpoint to resize font for header */
+@media (max-width: 1778px) {
+
+  /* auxillary header */
+  .desktop-header-container a {
+    font-size: 1.5em;
+  }
+
+  /* main website title */
+  .desktop-title a {
+    font-size: 2em;
+  }
+}
+
+/* hide all elements here to show mobile instead*/
+@media (max-width: 1000px) {
+  #header-aux {
+    display: none;
+  }
+}
+
+/* toggle the title to be non hyperlink if hamburger menu is open */
+.titleToggle a {
+  color: var(--base-hyperlink);
+  pointer-events: none;
+}
+/* change hover color to be white so it doesn't look clickable */
+.titleToggle a:hover {
+  color: var(--base-hyperlink);
+}

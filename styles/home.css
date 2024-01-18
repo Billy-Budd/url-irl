@@ -1,0 +1,53 @@
+@import url('main.css'); /* styles that applies to all pages */
+@import url('header/desktop.css'); /* header - desktop style */
+@import url('header/mobile.css'); /*  header - mobile  style */
+
+.portrait {
+  border-radius: 50%; /* circle, rounded edges */
+
+  /* size */
+  width: 35em; 
+  height: 35em;
+
+  user-select: none; /* cannot select image */
+
+  /* center image */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* change portrait size according to size of website, done in tiers */
+@media (max-width: 1778px) {
+  .portrait {
+    height: 20em;
+    width: 20em;
+  }
+}
+
+@media (max-width: 330px) {
+  .portrait {
+    height: 15em;
+    width: 15em;
+  }
+}
+
+@media (max-height: 740px) {
+  .portrait {
+    height: 20em;
+    width: 20em;
+  }
+}
+
+@media (max-height: 520px) {
+  .portrait {
+    height: 10em;
+    width: 10em;
+  }
+}
+
+/* toggle portrait on hamburger menu animation because picture was staying on top of menu */
+.portraitToggle {
+  display: none;
+}

@@ -1,0 +1,128 @@
+@import url('styles/main.css'); /* styles that applies to all pages */
+
+/* color definitions */
+:root {
+  --hamburger-background: rgb(15, 15, 15);
+  --hamburger-icon: rgb(255, 255, 255);
+  --hamburger-clicked: var(--hover-hyperlink);
+  --hamburger-shadow: rgba(255, 255, 255, 0.028)
+}
+
+/* container to for justification */
+.mobile-header-container {
+  display: inline-block;
+  justify-content: flex-start;
+}
+
+/* positiona and decoration stuff for simplified hamburger icon */
+.hamburger-icon {
+  /* decoration options */
+  font-size: 2em;
+  color: white;
+  user-select: none;
+
+  /* position settings: top and left help align the text a bit better, 
+     height and margin make a portion equal to website title */
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  height: 100px;
+  margin: 5px; 
+
+  /* settings to center the button in line with website title */
+  justify-content: center; /* horizontal centering of content */
+  align-items: center; /* vertical centering of content */
+  transform: scaleY(0.97); /* squishes the text just a little bit to make it inline with the text a bit better */
+  display: inline-block; /* prevents the container from collapsing around the text */
+}
+
+.hamburger-icon:hover {
+  cursor: pointer;
+  color: var(--hover-hyperlink);
+}
+
+/* menu instructions for a black page to contain links */
+.hamburger-menu {
+  /* position requirements for hidden on start */
+  height: 100%; /* full page height */
+  width: 0; /* width hidden on start */
+  position: fixed; /* fixed to make animation easier */
+  z-index: 2; /* put abover the shadow */
+
+  /* pinned to top left */
+  top: 0;
+  left: 0;
+
+  /* decoration and transition */
+  background-color: var(--website-background);
+  overflow-x: hidden; /* hide overage if there is any */
+  transition: 0.15s;
+}
+
+/* hamburger shadow so menu is highlighted and can close menu by clicking shadow */
+.hamburger-menu-shadow {
+  /* position requirements for hidden on start */
+  height: 100%; /* full page height */
+  width: 0; /* width hidden on start */
+  position: fixed; /* fixed to make animation easier */
+  z-index: 1; /* put abover the shadow */
+
+  /* pinned to top left */
+  top: 0;
+  left: 0;
+
+  /* decoration and transition */
+  background-color: var(--hamburger-shadow);
+  overflow-x: hidden; /* hide overage if there is any */
+  transition: 0.15s;
+}
+
+/* specific rules for links in the hamburger menu */
+.hamburger-menu a {
+
+   /* position */
+   flex-direction: column;
+
+   /* specified position stuff */
+   z-index: 3;
+   left: 115px;
+  
+  /* required options for alignment */
+  display: block;
+  margin: 40px 0;
+
+  padding-left: 15vw;
+
+  /* font style options */
+  font-size: 2em;
+  color: var(--base-hyperlink);
+  text-decoration: none; /* remove underline */
+  font-family: 'Times New Roman', Times, serif; /* secondary font */
+}
+
+/* special rules for close button so that it can be in line with 'home' */
+#close-button {
+  position: absolute; /* pin text */
+  left: -10vw; /* move it to the left of 'home' */
+
+  /* create a larger clickable area because it might be hard to hit on mobile */
+  width: 30px;
+  height: 30px;
+}
+
+/* selection color update because background changed color */
+.hamburger-menu a::selection {
+  background-color: var(--hamburger-background);
+}
+
+/* set hover color */
+.hamburger-menu a:hover {
+  color: var(--hover-hyperlink);
+}
+
+/* disable hamburger menu when desktop mode is engaged */
+@media (min-width: 1001px) {
+  .hamburger-icon{
+    display: none;
+  }
+}

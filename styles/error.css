@@ -1,0 +1,33 @@
+@import url('main.css'); /* styles that applies to all pages */
+@import url('header/desktop.css'); /* header - desktop style */
+@import url('header/mobile.css'); /*  header - mobile  style */
+
+.error-code {
+  font-size: 4em;
+  font-family: "nimbus";
+  color: var(--base-text);
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  top: 30%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Center the element precisely */
+  text-align: center;
+
+}
+
+.error-code p {
+  margin: 0; /* Remove default margin for the <p> element */
+}
+
+.error-code p a {
+  text-decoration: none;
+  color: var(--base-hyperlink);
+}
+
+.error-code p a:hover {
+  color: var(--hover-hyperlink);
+}
+
+#error-subtitle {
+  font-size: 2em;
+  top: 60%;
+}
